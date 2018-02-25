@@ -1,0 +1,3 @@
+
+if zero? pred succ z succ z z
+

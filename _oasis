@@ -1,0 +1,25 @@
+Name: Typesystems
+Version: 0.1
+Synopsis: Implementations of various typesystems from Types and Programming Languages by Benjamin C. Pierce
+Authors: Daniel McHenry <dmchenry@tracelink.com>
+License: LGPL with OCaml linking exception
+
+OASISFormat: 0.4
+BuildTools: ocamlbuild
+Plugins: META (0.4), DevFiles (0.4)
+
+AlphaFeatures:
+  ocamlbuild_more_args
+
+XOCamlbuildExtraArgs:
+  -use-menhir
+
+Library "parser"
+  Path: src
+  Modules: Grammar, Parser, Lexer
+
+Executable "run"
+  Path: src
+  MainIs: system.ml
+  BuildDepends: batteries, parser
+

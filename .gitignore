@@ -1,0 +1,7 @@
+
+_build
+*.sw*
+setup.*
+configure
+Makefile
+*.byte
